@@ -7,7 +7,7 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  "theme": "Rosé Pine",
+  "theme": "Catppuccin Mocha",
   "vim_mode": true,
   "relative_line_numbers": true,
   "telemetry": {
