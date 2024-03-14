@@ -3,6 +3,20 @@ theme = "catppuccin_mocha"
 [editor]
 line-number = "relative"
 cursorline = true
+auto-completion = true
+auto-save = true
+auto-format = true
+text-width = 80
+gutters = ["diff", "diagnostics", "line-numbers", "spacer"]
+
+[editor.statusline]
+left = ["mode", "spinner", "file-modification-indicator", "read-only-indicator"]
+center = ["file-name"]
+right = ["diagnostics", "register", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+separator = "│"
+mode.normal = "LOCKED"
+mode.insert = "WORKING"
+mode.select = "VISUAL SEL"
 
 [editor.cursor-shape]
 insert = "bar"
@@ -14,3 +28,11 @@ skip-levels = 1
 
 [editor.soft-wrap]
 enable = true
+
+[editor.lsp]
+enable=true
+auto-signature-help=true
+display-messages = true
+
+[keys.insert]
+j = { k = "normal_mode" } # Maps `jk` to exit insert mode
