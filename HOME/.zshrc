@@ -84,6 +84,7 @@ plugins=(
     zsh-syntax-highlighting
     dirhistory
     macos
+    zsh-vi-mode
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -128,6 +129,10 @@ alias lg="lazygit"
 alias so="source"
 alias na='nvim -c "vsplit input.txt" -c "split output.txt"'
 alias cn="cd ~/.config/nvim"
+alias tm="tmux"
+alias m="make"
+alias mr="make run"
+alias mc="make clean"
 
 export PATH=~/.local/bin:$PATH
 
@@ -166,6 +171,9 @@ export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
 # clang from brew
 export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
 export CC="/opt/homebrew/opt/llvm/bin/clang"
+
+# zsh-vi-mode
+ZVM_VI_INSERT_ESCAPE_BINDKEY=jk
 
 # Personal Configs end
 
