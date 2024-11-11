@@ -177,9 +177,9 @@ ZVM_VI_INSERT_ESCAPE_BINDKEY=jk
 
 # Personal Configs end
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-
 # Load Angular CLI autocompletion.
 source <(ng completion script)
+
+# NB Keep this as the last config
+# To customize prompt, run `p10k configure` or edit ~/.dotfiles/HOME/.p10k.zsh.
+[[ ! -f ~/.dotfiles/HOME/.p10k.zsh ]] || source ~/.dotfiles/HOME/.p10k.zsh
