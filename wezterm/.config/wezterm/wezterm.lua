@@ -76,7 +76,7 @@ config.window_background_opacity = 0.90
 config.tab_bar_at_bottom = true
 config.use_fancy_tab_bar = false
 config.tab_max_width = 30
-config.underline_position = '-6'
+config.underline_position = '-4'
 config.window_padding = {
     left = 5,
     right = 5,
@@ -103,8 +103,8 @@ end
 
 if wezterm.target_triple == 'aarch64-apple-darwin' then
     config.default_prog = { '/bin/zsh', '-l' }
-    config.font = wezterm.font('FiraCode Nerd Font Mono')
-    config.font_size = 15
+    config.font = wezterm.font('FiraCode Nerd Font Mono Ret')
+    config.font_size = 13
     config.macos_window_background_blur = 15
     config.initial_cols = 140
     config.initial_rows = 40
