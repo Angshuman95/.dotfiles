@@ -175,6 +175,9 @@ export CC="/opt/homebrew/opt/llvm/bin/clang"
 # zsh-vi-mode
 ZVM_VI_INSERT_ESCAPE_BINDKEY=jk
 
+# zoxide
+eval "$(zoxide init zsh)"
+
 # Personal Configs end
 
 # Load Angular CLI autocompletion.
