@@ -219,7 +219,9 @@ automatically-unhide-macos-hidden-apps = false
 
     down = 'volume down'
     up = 'volume up'
+    shift-up = ['volume set 75', 'mode main']
     shift-down = ['volume set 0', 'mode main']
+    enter = 'mode main'
 
 # 'callbacs'
 # All Browsers in Workspace B
