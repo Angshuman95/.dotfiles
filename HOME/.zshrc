@@ -117,6 +117,7 @@ source $ZSH/oh-my-zsh.sh
 #
 
 # Personal Configs
+alias ..="cd .."
 alias cc="clear"
 alias xx="exit"
 alias v="nvim"
@@ -164,6 +165,9 @@ _dotnet_zsh_complete()
 }
 
 compdef _dotnet_zsh_complete dotnet
+
+export DOTNET_ROOT="$(brew --prefix)/opt/dotnet/libexec"
+export PATH="$PATH:$DOTNET_ROOT"
 
 #fzf
 export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'

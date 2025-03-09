@@ -9,8 +9,8 @@
 {
   "assistant": {
     "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-3-5-sonnet-latest"
+      "provider": "openai",
+      "model": "o3-mini"
     },
     "version": "2"
   },
@@ -25,7 +25,7 @@
   "autosave": "on_focus_change",
   "ui_font_size": 14,
   "buffer_font_family": "FiraCode Nerd Font Mono",
-  "buffer_font_size": 14,
+  "buffer_font_size": 13,
   "buffer_font_features": {
     "cv02": true,
     "cv05": true,
@@ -43,10 +43,7 @@
     "onum": true
   },
   "show_wrap_guides": true,
-  "wrap_guides": [
-    80,
-    120
-  ],
+  "wrap_guides": [80, 120],
   "soft_wrap": "editor_width",
   "terminal": {
     "blinking": "off"
