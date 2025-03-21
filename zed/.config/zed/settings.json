@@ -16,14 +16,13 @@
   },
   "theme": "Catppuccin Mocha",
   "vim_mode": true,
-  "relative_line_numbers": true,
   "telemetry": {
     "diagnostics": false,
     "metrics": false
   },
   "auto_update": false,
   "autosave": "on_focus_change",
-  "ui_font_size": 14,
+  "ui_font_size": 15,
   "buffer_font_family": "FiraCode Nerd Font Mono",
   "buffer_font_size": 13,
   "buffer_font_features": {
@@ -46,6 +45,16 @@
   "wrap_guides": [80, 120],
   "soft_wrap": "editor_width",
   "terminal": {
-    "blinking": "off"
+    "blinking": "off",
+    "shell": {
+      "program": "zsh"
+    }
+  },
+  "vim": {
+    "use_system_clipboard": "never",
+    "use_multiline_find": true,
+    "use_smartcase_find": true,
+    "toggle_relative_line_numbers": true,
+    "highlight_on_yank_duration": 300
   }
 }
