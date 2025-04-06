@@ -22,7 +22,7 @@ local function conditionalActivatePane(
 )
     if isViProcess(pane) then
         window:perform_action(
-            -- This should match the keybinds you set in Neovim.
+        -- This should match the keybinds you set in Neovim.
             act.SendKey({ key = vim_direction, mods = 'CTRL' }),
             pane
         )
@@ -57,17 +57,20 @@ end
 config.term = 'wezterm'
 config.color_scheme = 'Catppuccin Mocha'
 config.harfbuzz_features = {
+    'cv01',
     'cv02',
     'cv05',
     'cv09',
     'cv14',
-    'ss04',
     'cv16',
-    'cv31',
     'cv25',
     'cv26',
-    'cv32',
     'cv28',
+    'cv31',
+    'cv32',
+    'ss03',
+    'ss04',
+    'ss05',
     'ss10',
     'zero',
     'onum',
