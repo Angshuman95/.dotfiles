@@ -19,6 +19,7 @@ font-feature = ss10
 font-feature = zero
 font-feature = onum
 adjust-underline-position = 5
+adjust-strikethrough-position = -3
 background-opacity = 0.90
 background-blur-radius = 20
 cursor-invert-fg-bg = true
