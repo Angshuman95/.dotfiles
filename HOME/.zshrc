@@ -166,8 +166,8 @@ _dotnet_zsh_complete()
 
 compdef _dotnet_zsh_complete dotnet
 
-export DOTNET_ROOT="$(brew --prefix)/opt/dotnet/libexec"
-export PATH="$PATH:$DOTNET_ROOT"
+export DOTNET_ROOT="$(brew --prefix)/opt/dotnet@8/libexec"
+export PATH="$(brew --prefix)/opt/dotnet@8/bin:$PATH"
 
 #fzf
 export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
