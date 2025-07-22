@@ -131,6 +131,7 @@ alias so="source"
 alias na='nvim -c "vsplit input.txt" -c "split output.txt"'
 alias cn="cd ~/.config/nvim"
 alias tm="tmux"
+alias zj="zellij"
 alias m="make"
 alias mr="make run"
 alias mc="make clean"
