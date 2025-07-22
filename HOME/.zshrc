@@ -131,7 +131,7 @@ alias so="source"
 alias na='nvim -c "vsplit input.txt" -c "split output.txt"'
 alias cn="cd ~/.config/nvim"
 alias tm="tmux"
-alias zj="zellij"
+alias jz="zellij"
 alias m="make"
 alias mr="make run"
 alias mc="make clean"
@@ -187,6 +187,10 @@ eval "$(zoxide init zsh)"
 
 # Load Angular CLI autocompletion.
 source <(ng completion script)
+
+# Sdkman
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 # NB Keep this as the last config
 # To customize prompt, run `p10k configure` or edit ~/.dotfiles/HOME/.p10k.zsh.
