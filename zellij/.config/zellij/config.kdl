@@ -37,10 +37,6 @@ keybinds clear-defaults=true {
         bind "8" { GoToTab 8; SwitchToMode "Normal"; }
         bind "9" { GoToTab 9; SwitchToMode "Normal"; }
 
-        // Move tabs
-        bind "H" { MoveTab "Left"; SwitchToMode "Normal"; }
-        bind "L" { MoveTab "Right"; SwitchToMode "Normal"; }
-
         // Advanced modes (for multiple operations)
         bind "p" { SwitchToMode "pane"; }
         bind "t" { SwitchToMode "tab"; }
@@ -196,7 +192,7 @@ default_mode "normal"
 // Choose the path to the default shell that zellij will use for opening new panes
 // Default: $SHELL
 // 
-// default_shell "fish"
+default_shell "zsh"
  
 // Choose the path to override cwd that zellij will use for opening new panes
 // 
