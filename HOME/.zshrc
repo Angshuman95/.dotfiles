@@ -188,6 +188,22 @@ eval "$(zoxide init zsh)"
 # Load Angular CLI autocompletion.
 source <(ng completion script)
 
+nmvn() {
+    local name=${1:-"my-app"}
+    mvn archetype:generate \
+        -DgroupId=com.example \
+        -DartifactId="$name" \
+        -DarchetypeArtifactId=maven-archetype-quickstart \
+        -DinteractiveMode=false
+    cd "$name"
+    mvn wrapper:wrapper
+
+    # Create a local run script
+    echo '#!/bin/bash' > run.sh
+    echo './mvnw exec:java -Dexec.mainClass="com.example.App"' >> run.sh
+    chmod +x run.sh
+}
+
 # Sdkman
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
