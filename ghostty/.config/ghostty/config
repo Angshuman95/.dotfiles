@@ -1,4 +1,4 @@
-theme = catppuccin-mocha
+theme = dark:Catppuccin Mocha,light:Catppuccin Latte
 font-family = "FiraCode Nerd Font Mono Ret"
 font-size = 13
 font-feature = cv01
