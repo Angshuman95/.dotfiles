@@ -197,11 +197,50 @@ nmvn() {
         -DinteractiveMode=false
     cd "$name"
     mvn wrapper:wrapper
+    # Create Makefile
+    cat > Makefile << 'EOF'
+# Makefile for Maven project
 
-    # Create a local run script
-    echo '#!/bin/bash' > run.sh
-    echo './mvnw exec:java -Dexec.mainClass="com.example.App"' >> run.sh
-    chmod +x run.sh
+# Default target
+.DEFAULT_GOAL := run
+
+# Variables
+MAIN_CLASS = com.example.App
+
+compile:
+	mvn compile
+
+run: compile
+	./mvnw exec:java -Dexec.mainClass="$(MAIN_CLASS)"
+
+clean:
+	mvn clean
+
+package:
+	mvn package
+
+test:
+	mvn test
+
+rebuild: clean compile
+
+install:
+	mvn install
+
+help:
+	@echo "Available targets:"
+	@echo "  compile  - Compile the project"
+	@echo "  run      - Compile and run the application"
+	@echo "  clean    - Clean the project"
+	@echo "  package  - Package the project"
+	@echo "  test     - Run tests"
+	@echo "  rebuild  - Clean and compile"
+	@echo "  install  - Install dependencies"
+	@echo "  help     - Show this help message"
+
+# Declare phony targets
+.PHONY: compile run clean package test rebuild install help
+EOF
 }
 
 # Sdkman
