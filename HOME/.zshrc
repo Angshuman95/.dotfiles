@@ -196,7 +196,17 @@ nmvn() {
         -DarchetypeArtifactId=maven-archetype-quickstart \
         -DinteractiveMode=false
     cd "$name"
+
+    sed -i.bak '/<\/project>/i\
+\
+  <properties>\
+    <maven.compiler.source>17</maven.compiler.source>\
+    <maven.compiler.target>17</maven.compiler.target>\
+  </properties>' pom.xml
+    rm pom.xml.bak
+
     mvn wrapper:wrapper
+
     # Create Makefile
     cat > Makefile << 'EOF'
 # Makefile for Maven project
@@ -242,6 +252,12 @@ help:
 .PHONY: compile run clean package test rebuild install help
 EOF
 }
+
+s() {
+    "$@" > /dev/null 2>&1 & disown
+}
+# Enable autosuggestions for s function
+compdef s=command
 
 # Sdkman
 export SDKMAN_DIR="$HOME/.sdkman"
