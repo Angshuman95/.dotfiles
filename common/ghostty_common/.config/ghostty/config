@@ -1,6 +1,5 @@
 theme = dark:Catppuccin Mocha,light:Catppuccin Latte
-font-family = "FiraCode Nerd Font Mono Ret"
-font-size = 13
+font-family = FiraCode Nerd Font Mono Ret
 font-feature = cv01
 font-feature = cv02
 font-feature = cv05
@@ -23,3 +22,5 @@ adjust-strikethrough-position = -3
 background-opacity = 0.90
 background-blur-radius = 20
 cursor-invert-fg-bg = true
+
+config-file = ?config_local
