@@ -183,8 +183,6 @@ ZVM_VI_INSERT_ESCAPE_BINDKEY=jk
 # zoxide
 eval "$(zoxide init zsh)"
 
-# Personal Configs end
-
 # Load Angular CLI autocompletion.
 source <(ng completion script)
 
@@ -262,6 +260,8 @@ compdef s=command
 # Sdkman
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+# Personal Configs end
 
 # NB Keep this as the last config
 # To customize prompt, run `p10k configure` or edit ~/.dotfiles/HOME/.p10k.zsh.
