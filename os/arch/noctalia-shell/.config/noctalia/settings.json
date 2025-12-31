@@ -527,7 +527,7 @@
     "ui": {
         "bluetoothDetailsViewMode": "grid",
         "bluetoothHideUnnamedDevices": false,
-        "fontDefault": "Sans Serif",
+        "fontDefault": "JetBrainsMono Nerd Font",
         "fontDefaultScale": 1,
         "fontFixed": "monospace",
         "fontFixedScale": 1,

@@ -59,6 +59,9 @@ PACMAN_PKGS=(
     # Desktop Environment / Hyprland Core
     "hyprland"
     "uwsm"
+    "cmake"             # hyprpm dependencies
+    "cpio"
+    "meson"
     "xdg-desktop-portal-hyprland"
     "hyprpolkitagent"
     "hypridle"
