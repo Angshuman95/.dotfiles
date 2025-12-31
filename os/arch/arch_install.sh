@@ -138,6 +138,10 @@ AUR_PKGS=(
     "quickshell"
     "gpu-screen-recorder"
     "ddcutil"
+
+    # Screenshot
+    "flameshot"
+    "grim"
 )
 
 # ==============================================================================
