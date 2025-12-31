@@ -260,5 +260,5 @@ compdef s=command
 # Personal Configs end
 
 # NB Keep this as the last config
-# To customize prompt, run `p10k configure` or edit ~/.dotfiles/HOME/.p10k.zsh.
-[[ ! -f ~/.dotfiles/HOME/.p10k.zsh ]] || source ~/.dotfiles/HOME/.p10k.zsh
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
