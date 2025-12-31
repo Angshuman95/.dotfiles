@@ -64,6 +64,7 @@ PACMAN_PKGS=(
     "meson"
     "xdg-desktop-portal-hyprland"
     "hyprpolkitagent"
+    "polkit-gnome"
     "hypridle"
     "qt6ct"             # Qt theming
     "bluez"             # Bluetooth
@@ -103,6 +104,10 @@ PACMAN_PKGS=(
 
     # Network
     "networkmanager"
+
+    # snapshots
+    "snapper"
+    "btrfs-assistant"
 )
 
 # AUR Packages
