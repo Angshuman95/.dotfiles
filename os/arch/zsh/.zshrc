@@ -144,8 +144,16 @@ alias m="make"
 alias mr="make run"
 alias mc="make clean"
 
+# gnome keyring
+if [ -n "$DESKTOP_SESSION" ]; then
+    eval $(gnome-keyring-daemon --start)
+    export SSH_AUTH_SOCK
+fi
+
+# Local bins
 export PATH=~/.local/bin:$PATH
 
+# NVM
 source /usr/share/nvm/init-nvm.sh
 
 # TMUX

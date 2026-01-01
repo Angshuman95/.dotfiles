@@ -113,6 +113,10 @@ PACMAN_PKGS=(
     "vlc"
     "ffmpeg"
     "vlc-plugin-ffmpeg"
+
+    # keyring
+    "gnome-keyring"
+    "seahorse"
 )
 
 # AUR Packages
