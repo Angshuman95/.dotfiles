@@ -108,6 +108,11 @@ PACMAN_PKGS=(
     # snapshots
     "snapper"
     "btrfs-assistant"
+
+    # vlc
+    "vlc"
+    "ffmpeg"
+    "vlc-plugin-ffmpeg"
 )
 
 # AUR Packages
