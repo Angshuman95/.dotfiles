@@ -155,6 +155,12 @@ AUR_PKGS=(
     # Screenshot
     "flameshot"
     "grim"
+
+    # PDF
+    "sioyek"
+
+    # VSCode
+    "visual-studio-code-bin"
 )
 
 # ==============================================================================
@@ -191,6 +197,20 @@ log "Setting up Tmux Plugin Manager..."
 if [ ! -d "$HOME/.config/tmux/plugins/tpm" ]; then
     git clone https://github.com/tmux-plugins/tpm "$HOME/.config/tmux/plugins/tpm"
 fi
+
+log "Install sdkman"
+if [ -d "$HOME/.sdkman" ]; then
+    warn "Sdkman already exists. Backing up to .sdkman.bak"
+    mv "$HOME/.sdkman" "$HOME/.sdkman.bak"
+fi
+# This prevents the script from pausing to ask questions
+export sdkman_auto_answer=true
+export sdkman_selfupdate_feature=false
+
+curl -s "https://get.sdkman.io" | bash
+
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 # ==============================================================================
 # 5. Shell Setup (Oh My Zsh + P10k)
