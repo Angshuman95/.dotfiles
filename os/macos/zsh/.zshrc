@@ -167,8 +167,8 @@ _dotnet_zsh_complete()
 
 compdef _dotnet_zsh_complete dotnet
 
-export DOTNET_ROOT="$(brew --prefix)/opt/dotnet@8/libexec"
-export PATH="$(brew --prefix)/opt/dotnet@8/bin:$PATH"
+# export DOTNET_ROOT="$(brew --prefix)/opt/dotnet@8/libexec"
+# export PATH="$(brew --prefix)/opt/dotnet@8/bin:$PATH"
 
 #fzf
 export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
@@ -265,4 +265,4 @@ export SDKMAN_DIR="$HOME/.sdkman"
 
 # NB Keep this as the last config
 # To customize prompt, run `p10k configure` or edit ~/.dotfiles/HOME/.p10k.zsh.
-[[ ! -f ~/.dotfiles/HOME/.p10k.zsh ]] || source ~/.dotfiles/HOME/.p10k.zsh
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
