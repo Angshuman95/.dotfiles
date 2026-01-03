@@ -127,6 +127,7 @@ AUR_PKGS=(
     # Fonts
     "ttf-jetbrains-mono-nerd"
     "ttf-firacode-nerd"
+    "noto-fonts"
     
     # Audio
     "pwvucontrol"       # Pipewire Volume Control
