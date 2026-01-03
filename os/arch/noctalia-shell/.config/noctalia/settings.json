@@ -527,9 +527,9 @@
     "ui": {
         "bluetoothDetailsViewMode": "grid",
         "bluetoothHideUnnamedDevices": false,
-        "fontDefault": "JetBrainsMono Nerd Font",
+        "fontDefault": "Noto Sans",
         "fontDefaultScale": 1,
-        "fontFixed": "JetBrainsMono Nerd Font Mono",
+        "fontFixed": "Noto Sans Mono",
         "fontFixedScale": 1,
         "panelBackgroundOpacity": 0.9,
         "panelsAttachedToBar": true,
