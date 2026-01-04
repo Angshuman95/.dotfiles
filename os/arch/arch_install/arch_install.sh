@@ -125,6 +125,7 @@ AUR_PKGS=(
     "zen-browser-bin"
     
     # Fonts
+    "terminus-font"
     "ttf-jetbrains-mono-nerd"
     "ttf-firacode-nerd"
     "noto-fonts"
