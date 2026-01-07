@@ -140,6 +140,7 @@ PACMAN_PKGS=(
     "cava"      # Audio visualizer
     "matugen"   # Material You color generator
     "wlsunset"          # Night light
+    "evolution-data-server"
 
     # Theming
     "adw-gtk-theme"     # Libadwaita theme for GTK3
