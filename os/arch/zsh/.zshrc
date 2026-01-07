@@ -124,6 +124,8 @@ if [ -z "$HYPRLAND_INSTANCE_SIGNATURE" ]; then
     fi
 fi
 
+export EDITOR=nvim
+
 # alias
 alias ..="cd .."
 alias cc="clear"

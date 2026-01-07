@@ -63,6 +63,7 @@ PACMAN_PKGS=(
     "cpio"
     "meson"
     "xdg-desktop-portal-hyprland"
+    "xdg-desktop-portal-gtk"
     "hyprpolkitagent"
     "polkit-gnome"
     "hypridle"
@@ -83,6 +84,7 @@ PACMAN_PKGS=(
     "tree"
     "inotify-tools"     # Needed for file watching scripts
     "ripgrep"           # Fast search (rg)
+    "fd"
     "stow"              # Dotfile management
     "eza"               # ls replacement
     "fzf"               # Fuzzy finder
@@ -117,6 +119,13 @@ PACMAN_PKGS=(
     # keyring
     "gnome-keyring"
     "seahorse"
+    
+    # sound
+    "pipewire"
+    "pipewire-pulse"
+    "pipewire-alsa"
+    "pipewire-jack"
+    "wireplumber"
 )
 
 # AUR Packages
@@ -131,7 +140,6 @@ AUR_PKGS=(
     "noto-fonts"
     
     # Audio
-    "pwvucontrol"       # Pipewire Volume Control
     "cava"              # Audio visualizer
     
     # Theming
