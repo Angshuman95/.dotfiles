@@ -66,11 +66,12 @@ PACMAN_PKGS=(
     "xdg-desktop-portal-gtk"
     "hyprpolkitagent"
     "polkit-gnome"
+    "polkit-qt6"
     "hypridle"
-    "qt6ct"             # Qt theming
     "bluez"             # Bluetooth
     "bluez-utils"
     "brightnessctl"     # Screen brightness
+    "ddcutil"
     
     # Terminal & Shell
     "ghostty"
@@ -93,6 +94,7 @@ PACMAN_PKGS=(
     "ncdu"              # Disk usage
     "lazygit"           # Git TUI
     "python"
+    "less"
 
     # File Management (Thunar + plugins)
     "thunar"
@@ -126,49 +128,44 @@ PACMAN_PKGS=(
     "pipewire-alsa"
     "pipewire-jack"
     "wireplumber"
+
+    # Fonts
+    "terminus-font"
+    "ttf-jetbrains-mono-nerd"
+    "ttf-firacode-nerd"
+    "noto-fonts"
+
+    # noctalia-shell
+    "quickshell"
+    "cava"      # Audio visualizer
+    "matugen"   # Material You color generator
+    "wlsunset"          # Night light
+
+    # Theming
+    "adw-gtk-theme"     # Libadwaita theme for GTK3
+    "nwg-look"          # GTK3 settings editor
+    "qt6ct"             # Qt theming
+
+    # Tools
+    "imv"               # Image viewer
+    "vlc"               # Video player
+    "cliphist"          # Clipboard manager
+    "nvm"               # Node Version Manager
+    "rustup"            # Rust toolchain
+    "yazi"
+
+    # Screenshot
+    "flameshot"
+    "grim"
 )
 
 # AUR Packages
 AUR_PKGS=(
     # Browser
     "zen-browser-bin"
-    
-    # Fonts
-    "terminus-font"
-    "ttf-jetbrains-mono-nerd"
-    "ttf-firacode-nerd"
-    "noto-fonts"
-    
-    # Audio
-    "cava"              # Audio visualizer
-    
-    # Theming
-    "adw-gtk-theme"     # Libadwaita theme for GTK3
-    "nwg-look"          # GTK3 settings editor
-    "matugen-bin"       # Material You color generator
-    
-    # Tools
-    "walker"            # App launcher
-    "wlsunset"          # Night light
-    "imv"               # Image viewer
-    "vlc"               # Video player
-    "cliphist"          # Clipboard manager
-    "nvm"               # Node Version Manager
-    "rustup"            # Rust toolchain
-    
-    # Elephant Ecosystem (as per history)
-    "elephant-bin"
-    "elephant-clipboard-bin"
-    "elephant-desktopapplications-bin"
-    
-    # Noctalia Shell Requirements
-    "quickshell"
-    "gpu-screen-recorder"
-    "ddcutil"
 
-    # Screenshot
-    "flameshot"
-    "grim"
+    # Noctalia Shell Requirements
+    "gpu-screen-recorder"
 
     # PDF
     "sioyek"
@@ -271,14 +268,6 @@ log "Configuring Services..."
 
 # Bluetooth
 sudo systemctl enable --now bluetooth
-
-# Elephant Service (User specific)
-# Using systemctl --user as per history, but checking if service file exists first is prudent
-if systemctl --user list-unit-files | grep -q elephant.service; then
-    systemctl --user enable --now elephant.service
-else
-    warn "Elephant service unit not found. You might need to log out/in or run 'elephant service enable' manually."
-fi
 
 # Networking Resolution
 # Based on your history, you moved from iwd/systemd-networkd to NetworkManager
