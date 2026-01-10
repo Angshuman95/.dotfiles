@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+<action>
+	<icon>utilities-terminal</icon>
+	<name>Open Terminal Here</name>
+	<submenu></submenu>
+	<unique-id>1767792224924370-1</unique-id>
+	<command>ghostty --working-directory=%f</command>
+	<description>Open Ghostty Here</description>
+	<range></range>
+	<patterns>*</patterns>
+	<startup-notify/>
+	<directories/>
+</action>
+<action>
+	<icon>accessories-text-editor</icon>
+	<name>Edit as Root</name>
+	<submenu></submenu>
+	<unique-id>1768042306361957-1</unique-id>
+	<command>ghostty -e sudo nvim %f</command>
+	<description>Use nvim for editing as root</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<text-files/>
+</action>
+<action>
+	<icon>system-file-manager</icon>
+	<name>Open as Root</name>
+	<submenu></submenu>
+	<unique-id>1768042521525143-2</unique-id>
+	<command>pkexec thunar %f</command>
+	<description>Open Thunar as root</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+</actions>
