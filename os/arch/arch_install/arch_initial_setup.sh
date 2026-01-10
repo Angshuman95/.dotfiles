@@ -65,14 +65,13 @@ PACMAN_PKGS=(
     "xdg-desktop-portal-hyprland"
     "xdg-desktop-portal-gtk"
     "hyprpolkitagent"
-    "polkit-gnome"
     "polkit-qt6"
     "hypridle"
     "bluez"             # Bluetooth
     "bluez-utils"
     "brightnessctl"     # Screen brightness
     "ddcutil"
-    
+
     # Terminal & Shell
     "ghostty"
     "zsh"
@@ -121,7 +120,7 @@ PACMAN_PKGS=(
     # keyring
     "gnome-keyring"
     "seahorse"
-    
+
     # sound
     "pipewire"
     "pipewire-pulse"
