@@ -191,7 +191,7 @@ arch-chroot /mnt
 - HOOKS section should look like
 
 ```conf
-HOOKS=(base udev modconf keyboard keymap consolefont block encrypt lvm2 filesystems fsck)
+HOOKS=(base udev modconf keyboard keymap consolefont block encrypt lvm2 resume filesystems fsck)
 ```
 
 - Remove: autodetect (optional, but safer to remove for now).
@@ -222,7 +222,7 @@ title   Arch Linux LTS
 linux   /vmlinuz-linux-lts
 initrd  /amd-ucode.img
 initrd  /initramfs-linux-lts.img
-options cryptdevice=UUID=${UUID}:cryptlvm root=/dev/ArchVG/root rootflags=subvol=@ rw
+options cryptdevice=UUID=${UUID}:cryptlvm root=/dev/ArchVG/root rootflags=subvol=@ rw resume=/dev/ArchVG/swap
 EOF
 
 # 3. Create the Standard Kernel Entry (Backup)
@@ -231,7 +231,7 @@ title   Arch Linux
 linux   /vmlinuz-linux
 initrd  /amd-ucode.img
 initrd  /initramfs-linux.img
-options cryptdevice=UUID=${UUID}:cryptlvm root=/dev/ArchVG/root rootflags=subvol=@ rw
+options cryptdevice=UUID=${UUID}:cryptlvm root=/dev/ArchVG/root rootflags=subvol=@ rw resume=/dev/ArchVG/swap
 EOF
 ```
 
