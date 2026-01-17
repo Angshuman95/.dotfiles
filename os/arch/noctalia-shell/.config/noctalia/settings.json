@@ -147,6 +147,16 @@
             ],
             "right": [
                 {
+                    "capsLockIcon": "letter-c",
+                    "hideWhenOff": false,
+                    "id": "LockKeys",
+                    "numLockIcon": "letter-n",
+                    "scrollLockIcon": "letter-s",
+                    "showCapsLock": true,
+                    "showNumLock": true,
+                    "showScrollLock": true
+                },
+                {
                     "defaultSettings": {
                         "hideInactive": false,
                         "removeMargins": false
@@ -226,10 +236,6 @@
             {
                 "enabled": true,
                 "id": "calendar-month-card"
-            },
-            {
-                "enabled": true,
-                "id": "timer-card"
             },
             {
                 "enabled": true,
