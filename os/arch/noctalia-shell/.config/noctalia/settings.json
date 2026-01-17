@@ -324,7 +324,7 @@
         "pinnedApps": [
         ],
         "pinnedStatic": false,
-        "position": "bottom",
+        "position": "left",
         "size": 1
     },
     "general": {
@@ -545,7 +545,7 @@
         "wifiDetailsViewMode": "grid"
     },
     "wallpaper": {
-        "directory": "/home/angshuman/Pictures/Wallpapers",
+        "directory": "/home/angshuman/.config/walls",
         "enableMultiMonitorDirectories": false,
         "enabled": true,
         "fillColor": "#000000",
@@ -557,7 +557,7 @@
         "panelPosition": "follow_bar",
         "randomEnabled": false,
         "randomIntervalSec": 300,
-        "recursiveSearch": false,
+        "recursiveSearch": true,
         "setWallpaperOnAllMonitors": true,
         "solidColor": "#1a1a2e",
         "transitionDuration": 1500,
