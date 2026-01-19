@@ -148,7 +148,7 @@ PACMAN_PKGS=(
 
     # Tools
     "imv"               # Image viewer
-    "vlc"               # Video player
+    "mpv"
     "cliphist"          # Clipboard manager
     "nvm"               # Node Version Manager
     "rustup"            # Rust toolchain
