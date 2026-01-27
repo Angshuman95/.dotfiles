@@ -173,6 +173,20 @@
                     "id": "plugin:privacy-indicator"
                 },
                 {
+                    "defaultSettings": {
+                        "arrowType": "caret",
+                        "byteThresholdActive": 1024,
+                        "fontSizeModifier": 1,
+                        "forceMegabytes": false,
+                        "iconSizeModifier": 1,
+                        "minWidth": 0,
+                        "showNumbers": true,
+                        "spacingInbetween": 0,
+                        "useCustomColors": false
+                    },
+                    "id": "plugin:network-indicator"
+                },
+                {
                     "blacklist": [
                     ],
                     "colorizeIcons": false,
