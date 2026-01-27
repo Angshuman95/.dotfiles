@@ -6,6 +6,7 @@
         "customLaunchPrefixEnabled": false,
         "enableClipPreview": true,
         "enableClipboardHistory": true,
+        "enableSettingsSearch": true,
         "iconMode": "tabler",
         "ignoreMouseInput": false,
         "pinnedApps": [
@@ -25,6 +26,7 @@
         ],
         "preferredPlayer": "",
         "visualizerType": "linear",
+        "volumeFeedback": false,
         "volumeOverdrive": false,
         "volumeStep": 5
     },
@@ -41,6 +43,8 @@
         ],
         "outerCorners": true,
         "position": "top",
+        "screenOverrides": [
+        ],
         "showCapsule": true,
         "showOutline": false,
         "useSeparateOpacity": false,
@@ -49,14 +53,18 @@
                 {
                     "characterCount": 2,
                     "colorizeIcons": false,
+                    "emptyColor": "secondary",
                     "enableScrollWheel": true,
+                    "focusedColor": "primary",
                     "followFocusedScreen": false,
                     "groupedBorderOpacity": 1,
                     "hideUnoccupied": false,
                     "iconScale": 0.8,
                     "id": "Workspace",
                     "labelMode": "index",
+                    "occupiedColor": "secondary",
                     "showApplications": false,
+                    "showBadge": true,
                     "showLabelsOnlyWhenOccupied": true,
                     "unfocusedIconsOpacity": 1
                 }
@@ -114,6 +122,7 @@
                     "showMemoryAsPercent": false,
                     "showMemoryUsage": true,
                     "showNetworkStats": false,
+                    "showSwapUsage": false,
                     "useMonospaceFont": true,
                     "usePrimaryColor": false
                 },
@@ -164,20 +173,6 @@
                     "id": "plugin:privacy-indicator"
                 },
                 {
-                    "defaultSettings": {
-                        "arrowType": "caret",
-                        "byteThresholdActive": 1024,
-                        "fontSizeModifier": 1,
-                        "forceMegabytes": false,
-                        "iconSizeModifier": 1,
-                        "minWidth": 0,
-                        "showNumbers": true,
-                        "spacingInbetween": 0,
-                        "useCustomColors": false
-                    },
-                    "id": "plugin:network-indicator"
-                },
-                {
                     "blacklist": [
                     ],
                     "colorizeIcons": false,
@@ -196,6 +191,7 @@
                 {
                     "deviceNativePath": "",
                     "displayMode": "onhover",
+                    "hideIfIdle": false,
                     "hideIfNotDetected": true,
                     "id": "Battery",
                     "showNoctaliaPerformance": false,
@@ -246,9 +242,10 @@
     },
     "colorSchemes": {
         "darkMode": true,
+        "generationMethod": "tonal-spot",
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
-        "matugenSchemeType": "scheme-tonal-spot",
+        "monitorForColors": "",
         "predefinedScheme": "Catppuccin",
         "schedulingMode": "off",
         "useWallpaperColors": true
@@ -338,15 +335,18 @@
         "allowPanelsOnScreenWithoutBar": true,
         "animationDisabled": false,
         "animationSpeed": 1,
+        "autoStartAuth": false,
         "avatarImage": "/home/angshuman/.face",
         "boxRadiusRatio": 1,
         "compactLockScreen": false,
         "dimmerOpacity": 0.2,
+        "enableLockScreenCountdown": true,
         "enableShadows": true,
         "forceBlackScreenCorners": false,
         "iRadiusRatio": 1,
         "language": "",
         "lockOnSuspend": true,
+        "lockScreenCountdownDuration": 10000,
         "radiusRatio": 1,
         "scaleRatio": 1,
         "screenRadiusRatio": 1,
@@ -367,6 +367,7 @@
         "screenLock": "",
         "screenUnlock": "",
         "session": "",
+        "startup": "",
         "wallpaperChange": ""
     },
     "location": {
@@ -491,7 +492,7 @@
         "showHeader": true,
         "showNumberLabels": true
     },
-    "settingsVersion": 41,
+    "settingsVersion": 44,
     "systemMonitor": {
         "cpuCriticalThreshold": 90,
         "cpuPollingInterval": 3000,
@@ -510,6 +511,8 @@
         "memPollingInterval": 3000,
         "memWarningThreshold": 80,
         "networkPollingInterval": 3000,
+        "swapCriticalThreshold": 90,
+        "swapWarningThreshold": 80,
         "tempCriticalThreshold": 90,
         "tempPollingInterval": 3000,
         "tempWarningThreshold": 80,
@@ -535,7 +538,7 @@
                 "id": "hyprland"
             }
         ],
-        "enableUserTemplates": false
+        "enableUserTheming": false
     },
     "ui": {
         "bluetoothDetailsViewMode": "grid",
@@ -553,6 +556,7 @@
         "wifiDetailsViewMode": "grid"
     },
     "wallpaper": {
+        "automationEnabled": false,
         "directory": "/home/angshuman/.config/walls",
         "enableMultiMonitorDirectories": false,
         "enabled": true,
@@ -563,16 +567,16 @@
         ],
         "overviewEnabled": false,
         "panelPosition": "follow_bar",
-        "randomEnabled": false,
         "randomIntervalSec": 300,
-        "recursiveSearch": true,
         "setWallpaperOnAllMonitors": true,
+        "showHiddenFiles": false,
         "solidColor": "#1a1a2e",
         "transitionDuration": 1500,
         "transitionEdgeSmoothness": 0.05,
         "transitionType": "random",
         "useSolidColor": false,
         "useWallhaven": false,
+        "viewMode": "recursive",
         "wallhavenApiKey": "",
         "wallhavenCategories": "111",
         "wallhavenOrder": "desc",
