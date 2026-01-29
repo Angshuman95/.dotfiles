@@ -193,6 +193,9 @@
                     "id": "plugin:network-indicator"
                 },
                 {
+                    "id": "plugin:pomodoro"
+                },
+                {
                     "blacklist": [
                     ],
                     "colorizeIcons": false,
