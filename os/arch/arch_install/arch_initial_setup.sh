@@ -164,9 +164,6 @@ AUR_PKGS=(
     # Browser
     "zen-browser-bin"
 
-    # Noctalia Shell Requirements
-    "gpu-screen-recorder"
-
     # PDF
     "sioyek"
 
