@@ -1,0 +1,32 @@
+{
+  "Name": "Huion H951P (Custom Fix)",
+  "Specifications": {
+    "Digitizer": {
+      "Width": 221,
+      "Height": 138,
+      "MaxX": 44200,
+      "MaxY": 27600
+    },
+    "Pen": {
+      "MaxPressure": 8191,
+      "ButtonCount": 2
+    },
+    "AuxiliaryButtons": {
+      "ButtonCount": 11
+    }
+  },
+  "DigitizerIdentifiers": [
+    {
+      "VendorID": 9580,
+      "ProductID": 103,
+      "InputReportLength": 12,
+      "ReportParser": "OpenTabletDriver.Configurations.Parsers.Huion.InspiroyReportParser",
+      "InitializationStrings": [
+        200
+      ]
+    }
+  ],
+  "Attributes": {
+    "libinputoverride": "1"
+  }
+}
