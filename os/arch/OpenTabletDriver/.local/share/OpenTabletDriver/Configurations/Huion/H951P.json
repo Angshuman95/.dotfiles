@@ -1,5 +1,5 @@
 {
-  "Name": "Huion H951P (Custom Fix)",
+  "Name": "Huion H951P",
   "Specifications": {
     "Digitizer": {
       "Width": 221,
@@ -21,6 +21,9 @@
       "ProductID": 103,
       "InputReportLength": 12,
       "ReportParser": "OpenTabletDriver.Configurations.Parsers.Huion.InspiroyReportParser",
+      "DeviceStrings": {
+        "201": "HUION_(T21k|T254)_\\d{6}$"
+      },
       "InitializationStrings": [
         200
       ]
