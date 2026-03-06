@@ -95,13 +95,10 @@ PACMAN_PKGS=(
     "python"
     "less"
 
-    # File Management (Thunar + plugins)
-    "thunar"
+    # File Management (nautilus + plugins)
+    "nautilus"
     "gvfs"
     "gvfs-mtp"
-    "tumbler"
-    "thunar-volman"
-    "thunar-archive-plugin"
     "file-roller"
     "ffmpegthumbnailer"
 
