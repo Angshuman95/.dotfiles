@@ -132,7 +132,8 @@ PACMAN_PKGS=(
     "noto-fonts"
 
     # noctalia-shell
-    "quickshell"
+    "noctalia-qs"
+    "imagemagick"
     "cava"      # Audio visualizer
     "matugen"   # Material You color generator
     "wlsunset"          # Night light
