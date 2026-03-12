@@ -155,6 +155,11 @@ PACMAN_PKGS=(
     # Screenshot
     "flameshot"
     "grim"
+
+    # OCR
+    "recoll"
+    "tesseract-data-eng"
+    "perl-image-exiftool"
 )
 
 # AUR Packages
@@ -167,6 +172,9 @@ AUR_PKGS=(
 
     # VSCode
     "visual-studio-code-bin"
+
+    # OCR
+    "ocrmypdf"
 )
 
 # ==============================================================================
