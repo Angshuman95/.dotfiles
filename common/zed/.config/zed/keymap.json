@@ -2,7 +2,7 @@
   {
     "context": "Editor && vim_mode == insert && !menu",
     "bindings": {
-      "j k": "vim::NormalBefore" // remap jk in insert mode to escape.
+      "j k": "vim::NormalBefore"
     }
   },
   {
