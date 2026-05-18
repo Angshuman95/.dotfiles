@@ -1,7 +1,7 @@
 #!/bin/bash
 
-SOURCE_DIR="/home/$USER/Documents/Scans"
-ARCHIVE_DIR="/home/$USER/Documents/Archive"
+SOURCE_DIR="/home/$USER/Documents/scans"
+ARCHIVE_DIR="/home/$USER/Documents/syncthing/archive"
 
 for file in "$SOURCE_DIR"/*.pdf; do
     [ -e "$file" ] || continue
