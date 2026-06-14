@@ -50,6 +50,7 @@ local browser     = "zen-browser"
 -- end)
 hl.on("hyprland.start", function()
     hl.exec_cmd("qs -c noctalia-shell")
+    hl.exec_cmd("hypridle")
     hl.exec_cmd("flameshot")
     hl.exec_cmd("systemctl --user start hyprpolkitagent")
 
