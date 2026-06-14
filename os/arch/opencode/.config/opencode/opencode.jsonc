@@ -1,0 +1,25 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "agent": {
+    "chat": {
+      "mode": "primary",
+      "description": "A pure chat assistant with no file or system access",
+      "prompt": "You are a pure chat assistant. You DO NOT have access to any file system tools, bash, read, or search functions. DO NOT attempt to invoke any tools to fulfill requests. Answer the user directly based on your internal knowledge and any text explicitly attached to the prompt.",
+      "permission": {
+        "read": "deny",
+        "grep": "deny",
+        "glob": "deny",
+        "edit": "deny",
+        "write": "deny",
+        "bash": "deny",
+        "list": "deny",
+        "task": "deny",
+        "skill": "deny",
+        "webfetch": "deny",
+        "websearch": "deny",
+        "codesearch": "deny",
+        "patch": "deny",
+      },
+    },
+  },
+}
