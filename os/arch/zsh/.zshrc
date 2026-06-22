@@ -267,6 +267,10 @@ compdef s=command
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
+if [ -f "$HOME/.zsh_secrets" ]; then
+    source "$HOME/.zsh_secrets"
+fi
+
 # Personal Configs end
 
 # NB Keep this as the last config
