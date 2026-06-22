@@ -69,6 +69,7 @@ PACMAN_PKGS=(
     "hypridle"
     "bluez"             # Bluetooth
     "bluez-utils"
+    "bluetui"
     "brightnessctl"     # Screen brightness
     "ddcutil"
 
@@ -175,6 +176,9 @@ AUR_PKGS=(
 
     # OCR
     "ocrmypdf"
+
+    # Bluetooth at startup
+    "mkinitcpio-bluetooth"
 )
 
 # ==============================================================================
