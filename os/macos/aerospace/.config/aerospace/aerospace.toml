@@ -11,6 +11,11 @@ after-login-command = []
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
 after-startup-command = []
 
+# Omitting config-version is equivalent to config-version = 1 (the lowest
+# possible version). The currently highest possible version is 2. It is 
+# recommended to use that version.
+config-version = 2
+
 # Start AeroSpace at login
 start-at-login = true
 
