@@ -1,5 +1,9 @@
 theme = dark:Catppuccin Mocha,light:Catppuccin Latte
-font-family = IosCusSemi Nerd Font
+font-family = "IosCusSemi Nerd Font"
+font-family-bold = "IosCusBoldSemi Nerd Font"
+font-family-italic = "IosCusSemi Nerd Font"
+font-family-bold-italic = "IosCusBoldSemi Nerd Font"
+
 adjust-underline-position = 5
 adjust-strikethrough-position = -3
 background-opacity = 0.90
