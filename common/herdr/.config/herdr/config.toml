@@ -3,7 +3,7 @@
 
 # Show first-run notification setup on startup.
 # Missing also shows onboarding; set false after you've chosen.
-# onboarding = true
+onboarding = false
 
 [theme]
 # Built-in themes: catppuccin, terminal, tokyo-night, dracula, nord,
@@ -246,6 +246,8 @@ tab_bar_position = "bottom"
 # accent = "cyan"
 
 # Background notification popup delivery
+show_agent_labels_on_pane_borders = true
+
 [ui.toast]
 # off = disable pop-up notifications
 # herdr = show in-app toasts
@@ -253,6 +255,8 @@ tab_bar_position = "bottom"
 # system = ask the OS notification service directly
 # delivery = "off"
 # delay_seconds = 1
+
+delivery = "herdr"
 
 [ui.toast.herdr]
 # position = "bottom-right"
