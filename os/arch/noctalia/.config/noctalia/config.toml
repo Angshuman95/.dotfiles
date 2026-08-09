@@ -41,12 +41,13 @@ widget_order = []
     [desktop_widgets.widget]
 
 [dock]
+auto_hide = true
 concave_edge_corners = false
 enabled = true
 icon_size = 36
 position = "left"
 reserve_space = false
-smart_auto_hide = true
+smart_auto_hide = false
 
 [location]
 address = "Kolkata, India"
