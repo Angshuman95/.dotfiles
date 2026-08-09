@@ -97,6 +97,12 @@ clipboard_history_max_entries = 500
     [shell.launcher]
     app_grid = true
 
+        [shell.launcher.providers.session]
+        global = true
+
+        [shell.launcher.providers.windows]
+        global = true
+
     [shell.panel]
     open_near_click_clipboard = true
     open_near_click_wallpaper = true
