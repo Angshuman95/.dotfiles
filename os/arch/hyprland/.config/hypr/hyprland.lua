@@ -28,9 +28,10 @@ hl.monitor({
 ---------------------
 
 -- Set programs that you use
+local ipc         = "noctalia msg "
 local terminal    = "ghostty"
 local fileManager = "nautilus"
-local menu        = "qs -c noctalia-shell ipc call launcher toggle"
+local menu        = ipc .. "panel-toggle launcher"
 local browser     = "zen-browser"
 
 
@@ -49,7 +50,7 @@ local browser     = "zen-browser"
 --   hl.exec_cmd("waybar & hyprpaper & firefox")
 -- end)
 hl.on("hyprland.start", function()
-    hl.exec_cmd("qs -c noctalia-shell")
+    hl.exec_cmd("noctalia")
     hl.exec_cmd("hypridle")
     hl.exec_cmd("flameshot")
     hl.exec_cmd("systemctl --user start hyprpolkitagent")
@@ -154,7 +155,7 @@ hl.config({
             enabled      = true,
             range        = 4,
             render_power = 3,
-            color        = 0xee1a1a1a,
+            color        = "0xee1a1a1a",
         },
 
         blur = {
@@ -309,7 +310,7 @@ hl.bind(mainMod .. " + V", hl.dsp.layout("togglesplit"))    -- dwindle only
 
 -- Session
 hl.bind(mainMod .. " + Q", hl.dsp.focus({ workspace = "previous" }))
-hl.bind(mainMod .. " + Escape", hl.dsp.exec_cmd("qs -c noctalia-shell ipc call lockScreen lock"))
+hl.bind(mainMod .. " + Escape", hl.dsp.exec_cmd(ipc .. "session lock"))
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
 
 -- Move focus with mainMod + vim keys
@@ -421,6 +422,16 @@ hl.window_rule({
 --     no_anim = true,
 -- })
 -- overlayLayerRule:set_enabled(false)
+hl.layer_rule({
+  name = "noctalia",
+  match = {
+    namespace = "^noctalia-(bar-.+|notification|dock|panel|attached-panel|osd|window-switcher)$",
+  },
+  no_anim = true,
+  ignore_alpha = 0.5,
+  blur = true,
+  blur_popups = true,
+})
 
 -- Hyprland-run windowrule
 hl.window_rule({
@@ -447,4 +458,10 @@ hl.window_rule({
     },
     float  = true,
     center = true,
+})
+
+hl.window_rule({
+    match = { class = "dev.noctalia.Noctalia" },
+    float = true,
+    size = { 1080, 920 },
 })

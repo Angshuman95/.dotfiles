@@ -132,14 +132,6 @@ PACMAN_PKGS=(
     "ttf-firacode-nerd"
     "noto-fonts"
 
-    # noctalia-shell
-    "noctalia-qs"
-    "imagemagick"
-    "cava"      # Audio visualizer
-    "matugen"   # Material You color generator
-    "wlsunset"          # Night light
-    "evolution-data-server"
-
     # Theming
     "adw-gtk-theme"     # Libadwaita theme for GTK3
     "nwg-look"          # GTK3 settings editor
@@ -179,6 +171,9 @@ AUR_PKGS=(
 
     # Bluetooth at startup
     "mkinitcpio-bluetooth"
+
+    # Noctalia Shell v5
+    "noctalia"
 )
 
 # ==============================================================================
@@ -261,15 +256,7 @@ mkdir -p "$ZSH_CUSTOM/plugins"
 # Note: You still need to enable these in your .zshrc manually if you aren't stowing a config
 
 # ==============================================================================
-# 6. Noctalia Shell Setup
-# ==============================================================================
-log "Installing Noctalia Shell..."
-mkdir -p "$HOME/.config/quickshell/noctalia-shell"
-# Downloads the latest release and strips the first folder component to keep it clean
-curl -sL https://github.com/noctalia-dev/noctalia-shell/releases/latest/download/noctalia-latest.tar.gz | tar -xz --strip-components=1 -C "$HOME/.config/quickshell/noctalia-shell"
-
-# ==============================================================================
-# 7. Services & Networking Clean up
+# 6. Services & Networking Clean up
 # ==============================================================================
 log "Configuring Services..."
 
@@ -287,7 +274,7 @@ log "Enabling NetworkManager..."
 sudo systemctl enable --now NetworkManager
 
 # ==============================================================================
-# 8. Final Cleanup
+# 7. Final Cleanup
 # ==============================================================================
 log "Removing unused dependencies..."
 # Use || true to prevent script failure if nothing to remove
