@@ -180,8 +180,11 @@ _dotnet_zsh_complete()
 
 compdef _dotnet_zsh_complete dotnet
 
-#fzf
+# fzf
 export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
+bindkey '^T' fzf-file-widget
+bindkey '^R' fzf-history-widget
+bindkey '^G' fzf-cd-widget
 
 # zsh-vi-mode
 ZVM_VI_INSERT_ESCAPE_BINDKEY=jk

@@ -170,8 +170,11 @@ compdef _dotnet_zsh_complete dotnet
 # export DOTNET_ROOT="$(brew --prefix)/opt/dotnet@8/libexec"
 # export PATH="$(brew --prefix)/opt/dotnet@8/bin:$PATH"
 
-#fzf
+# fzf
 export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
+bindkey '^T' fzf-file-widget
+bindkey '^R' fzf-history-widget
+bindkey '^G' fzf-cd-widget
 
 # clang from brew
 export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
