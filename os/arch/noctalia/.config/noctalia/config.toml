@@ -131,7 +131,7 @@ directory = "/home/angshuman/.config/walls/minimal"
     path = "/home/angshuman/.config/walls/minimal/a_flower_on_a_dark_background.png"
 
 [widget.clock]
-format = "{:%H:%M:%S}"
+format = "{:%a, %b %d %H:%M:%S}"
 
 [widget.media]
 hide_when_no_media = true
