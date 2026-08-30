@@ -16,13 +16,19 @@ for file in "$SOURCE_DIR"/*.pdf; do
 
     new_name="$(date +%Y-%m-%d)_${desc// /_}.pdf"
 
-    # OCR
-    ocrmypdf --skip-text "$file" "$ARCHIVE_DIR/$new_name"
+    if ocrmypdf --skip-text "$file" "$ARCHIVE_DIR/$new_name"; then
 
-    # Tags
-    exiftool -overwrite_original -Keywords="$tags" "$ARCHIVE_DIR/$new_name"
+        exiftool -overwrite_original -Keywords="$tags" "$ARCHIVE_DIR/$new_name"
 
-    rm "$file"
+        rm "$file"
 
-    echo "Processed $(basename "$file") to $ARCHIVE_DIR/$new_name"
+        echo "Processed $(basename "$file") to $ARCHIVE_DIR/$new_name"
+    else
+        echo "Warning: OCR failed for $(basename "$file") (likely a signed PDF)."
+        echo "Moving original file without modifications to preserve the signature..."
+
+        mv "$file" "$ARCHIVE_DIR/$new_name"
+
+        echo "Moved $(basename "$file") to $ARCHIVE_DIR/$new_name (Skipped OCR & Tags)"
+    fi
 done

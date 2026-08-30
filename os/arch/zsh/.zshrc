@@ -180,8 +180,11 @@ _dotnet_zsh_complete()
 
 compdef _dotnet_zsh_complete dotnet
 
-#fzf
+# fzf
 export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
+bindkey '^T' fzf-file-widget
+bindkey '^R' fzf-history-widget
+bindkey '^G' fzf-cd-widget
 
 # zsh-vi-mode
 ZVM_VI_INSERT_ESCAPE_BINDKEY=jk
@@ -262,6 +265,23 @@ s() {
 }
 # Enable autosuggestions for s function
 compdef s=command
+
+gdf() {
+    git diff --name-only --diff-filter=ACMR HEAD | fzf \
+        --keep-right \
+        --multi \
+        --no-height \
+        --layout=reverse \
+        --border=rounded \
+        --margin=0,1 \
+        --info=inline \
+        --prompt="📝 Files: " \
+        --preview='DFT_WIDTH=$FZF_PREVIEW_COLUMNS git difftool -y -x "difft --color=always" HEAD -- {}' \
+        --preview-window='right,75%,border-left' \
+        --bind='ctrl-f:preview-page-down,ctrl-b:preview-page-up' \
+        --bind='ctrl-e:change-preview-window(right,99%|right,75%,border-left)' \
+        --header=' [CTRL-F/B] Scroll | [CTRL-E] Expand Diff | [ENTER] Exit '
+}
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
